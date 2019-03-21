@@ -1,0 +1,89 @@
+2019-03-21 17:26:56,710 ERROR: Exception on /add_task [POST] [in /home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/dx/kinetics_db-master/app/main/routes_insert_data.py", line 41, in add_task
+    user=form.status.data)
+  File "<string>", line 4, in __init__
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/state.py", line 424, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 249, in reraise
+    raise value
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/state.py", line 421, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/ext/declarative/base.py", line 747, in _declarative_constructor
+    setattr(self, k, kwargs[k])
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 229, in __set__
+    instance_dict(instance), value, None)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 815, in set
+    value = self.fire_replace_event(state, dict_, value, old, initiator)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 835, in fire_replace_event
+    state, value, previous, initiator or self._replace_token)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 1203, in emit_backref_from_scalar_set_event
+    passive=PASSIVE_NO_FETCH)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 996, in append
+    value = self.fire_append_event(state, dict_, value, initiator)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 945, in fire_append_event
+    state, value, initiator or self._append_token)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 1216, in emit_backref_from_collection_append_event
+    _acceptable_key_err(state, initiator, child_impl)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 1153, in _acceptable_key_err
+    attribute.impl.parent_token
+ValueError: Bidirectional attribute conflict detected: Passing object <Status at 0x7fb1fc012748> to attribute "Task.user" triggers a modify event on attribute "Task.status" via the backref "Status.tasks".
+2019-03-21 17:27:47,135 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 17:27:50,882 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 17:27:58,484 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 17:28:30,894 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 17:28:46,214 ERROR: Exception on /add_task [POST] [in /home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/dx/kinetics_db-master/app/main/routes_insert_data.py", line 41, in add_task
+    user=form.status.data)
+  File "<string>", line 4, in __init__
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/state.py", line 424, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 249, in reraise
+    raise value
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/state.py", line 421, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/ext/declarative/base.py", line 747, in _declarative_constructor
+    setattr(self, k, kwargs[k])
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 229, in __set__
+    instance_dict(instance), value, None)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 815, in set
+    value = self.fire_replace_event(state, dict_, value, old, initiator)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 835, in fire_replace_event
+    state, value, previous, initiator or self._replace_token)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 1185, in emit_backref_from_scalar_set_event
+    child_impl = child_state.manager[key].impl
+KeyError: 'tasks'
+2019-03-21 17:29:58,894 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]

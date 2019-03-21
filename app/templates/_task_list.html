@@ -1,0 +1,24 @@
+<td>
+    <a href="{{ url_for('main.see_task', task_id=data_point.id )}}"> {{ data_point.id }} </a>
+</td>
+<td>
+    {{ data_point.title }}
+</td>
+<td>
+    {{ data_point.description }}
+</td>
+<td>
+    {{ data_point.created }}
+</td>
+<td>
+    {{ data_point.updated }}
+</td>
+<td>
+    {{ data_point.due_date }}
+</td>
+<td>
+    {{ data_point.status.name }}
+</td>
+<td>
+    {{ data_point.user.name }}
+</td>

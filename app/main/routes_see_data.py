@@ -10,7 +10,6 @@ from app.models import User, Task, Status
 
 
 @bp.route('/see_user_list')
-@login_required
 def see_user_list():
     tab_status = {"users": "active", "tasks": "#"}
     header = Markup("<th>ID</th> \
@@ -32,7 +31,6 @@ def see_user_list():
 
 
 @bp.route('/see_user/<user_id>', methods=['GET', 'POST'])
-@login_required
 def see_user(user_id):
     user = User.query.filter_by(id=user_id).first()
 
@@ -52,7 +50,6 @@ def see_user(user_id):
 
 
 @bp.route('/see_task_list')
-@login_required
 def see_task_list():
     tab_status = {"users": "#", "tasks": "active"}
     header = Markup("<th>ID</th> \
@@ -78,7 +75,6 @@ def see_task_list():
 
 
 @bp.route('/see_task/<task_id>', methods=['GET', 'POST'])
-@login_required
 def see_task(task_id):
     task = Task.query.filter_by(id=task_id).first()
 

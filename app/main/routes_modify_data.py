@@ -13,7 +13,6 @@ from datetime import datetime
 
 
 @bp.route('/modify_user/<user_id>', methods=['GET', 'POST'])
-@login_required
 def modify_user(user_id):
     user = User.query.filter_by(id=user_id).first()
 
@@ -39,7 +38,6 @@ def modify_user(user_id):
 
 
 @bp.route('/modify_task/<task_id>', methods=['GET', 'POST'])
-@login_required
 def modify_task(task_id):
     task = Task.query.filter_by(id=task_id).first()
 

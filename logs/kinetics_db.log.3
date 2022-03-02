@@ -1,15 +1,4 @@
-2019-02-03 22:42:32,576 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-02-03 22:42:37,722 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-02-03 22:43:01,915 ERROR: Exception on /auth/register [POST] [in /home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
-    context)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.OperationalError: no such table: user
-
-The above exception was the direct cause of the following exception:
-
+2019-03-21 16:04:58,375 ERROR: Exception on /see_task_list [GET] [in /home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -23,7 +12,70 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/dx/kinetics_db-master/app/auth/routes.py", line 41, in register
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/dx/kinetics_db-master/app/main/routes_see_data.py", line 77, in see_task_list
+    next_url=next_url, prev_url=prev_url)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/dx/kinetics_db-master/app/templates/see_data.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/dx/kinetics_db-master/app/templates/base.html", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/home/dx/kinetics_db-master/app/templates/base.html", line 59, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/home/dx/kinetics_db-master/app/templates/see_data.html", line 21, in block "app_content"
+    {% include '_' + data_type + '_list.html' %}
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: _tasks_list.html
+2019-03-21 16:06:07,945 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 16:06:34,113 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 16:07:16,352 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 16:07:37,554 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 16:09:26,618 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 16:10:32,152 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 16:12:48,359 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 16:12:52,115 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 17:13:34,744 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 17:15:36,467 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 17:15:41,037 ERROR: Exception on /modify_task/1 [POST] [in /home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/dx/kinetics_db-master/app/main/routes_modify_data.py", line 53, in modify_task
     if form.validate_on_submit():
   File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_wtf/form.py", line 101, in validate_on_submit
     return self.is_submitted() and self.validate()
@@ -35,56 +87,40 @@ Traceback (most recent call last):
     stop_validation = self._run_validation_chain(form, chain)
   File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/wtforms/fields/core.py", line 226, in _run_validation_chain
     validator(form, self)
-  File "/home/dx/kinetics_db-master/app/auth/forms.py", line 23, in validate_username
-    user = User.query.filter_by(username=username.data).first()
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2895, in first
-    ret = list(self[0:1])
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2687, in __getitem__
-    return list(res)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2995, in __iter__
-    return self._execute_and_instances(context)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 3018, in _execute_and_instances
-    result = conn.execute(querycontext.statement, self._params)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 948, in execute
-    return meth(self, multiparams, params)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
-    compiled_sql, distilled_params
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
-    context)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
-    exc_info
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 265, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 248, in reraise
-    raise value.with_traceback(tb)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
-    context)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 509, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user [SQL: 'SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.username = ?\n LIMIT ? OFFSET ?'] [parameters: ('marta', 1, 0)] (Background on this error at: http://sqlalche.me/e/e3q8)
-2019-02-03 22:43:50,296 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-02-03 22:44:30,145 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 14:00:46,166 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:34:00,751 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:34:11,777 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:34:36,167 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:34:53,602 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:35:49,047 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:35:56,416 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:45:27,189 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:45:39,770 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:51:11,355 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:51:57,545 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:53:02,707 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:54:26,782 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:54:50,944 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:55:00,701 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:56:24,322 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:56:31,710 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:56:33,527 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 15:56:41,126 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 16:01:58,513 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 16:04:06,352 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 16:04:33,397 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+  File "/home/dx/kinetics_db-master/app/main/forms.py", line 56, in validate_due_date
+    if len(due_date.data) > 0:
+TypeError: object of type 'NoneType' has no len()
+2019-03-21 17:15:48,875 ERROR: Exception on /modify_task/1 [POST] [in /home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/dx/kinetics_db-master/app/main/routes_modify_data.py", line 53, in modify_task
+    if form.validate_on_submit():
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_wtf/form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/wtforms/form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/wtforms/form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/wtforms/fields/core.py", line 206, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/wtforms/fields/core.py", line 226, in _run_validation_chain
+    validator(form, self)
+  File "/home/dx/kinetics_db-master/app/main/forms.py", line 56, in validate_due_date
+    if len(due_date.data) > 0:
+TypeError: object of type 'NoneType' has no len()
+2019-03-21 17:16:12,189 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 17:17:23,072 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
+2019-03-21 17:19:06,784 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]

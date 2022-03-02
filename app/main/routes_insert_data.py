@@ -9,7 +9,6 @@ from app.utils.parsers import parse_input_list
 
 
 @bp.route('/add_user', methods=['GET', 'POST'])
-@login_required
 def add_user():
     form = UserForm()
 
@@ -29,7 +28,6 @@ def add_user():
 
 
 @bp.route('/add_task', methods=['GET', 'POST'])
-@login_required
 def add_task():
     form = TaskForm()
 

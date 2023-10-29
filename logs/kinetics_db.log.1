@@ -1,90 +1,96 @@
-2019-03-21 17:26:56,710 ERROR: Exception on /add_task [POST] [in /home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py:1761]
+2023-10-29 16:44:10,511 ERROR: Exception on /see_user_list [GET] [in /home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py:825]
 Traceback (most recent call last):
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
     response = self.full_dispatch_request()
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/dx/kinetics_db-master/app/main/routes_insert_data.py", line 41, in add_task
-    user=form.status.data)
-  File "<string>", line 4, in __init__
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/state.py", line 424, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 249, in reraise
-    raise value
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/state.py", line 421, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/ext/declarative/base.py", line 747, in _declarative_constructor
-    setattr(self, k, kwargs[k])
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 229, in __set__
-    instance_dict(instance), value, None)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 815, in set
-    value = self.fire_replace_event(state, dict_, value, old, initiator)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 835, in fire_replace_event
-    state, value, previous, initiator or self._replace_token)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 1203, in emit_backref_from_scalar_set_event
-    passive=PASSIVE_NO_FETCH)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 996, in append
-    value = self.fire_append_event(state, dict_, value, initiator)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 945, in fire_append_event
-    state, value, initiator or self._append_token)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 1216, in emit_backref_from_collection_append_event
-    _acceptable_key_err(state, initiator, child_impl)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 1153, in _acceptable_key_err
-    attribute.impl.parent_token
-ValueError: Bidirectional attribute conflict detected: Passing object <Status at 0x7fb1fc012748> to attribute "Task.user" triggers a modify event on attribute "Task.status" via the backref "Status.tasks".
-2019-03-21 17:27:47,135 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 17:27:50,882 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 17:27:58,484 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 17:28:30,894 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2019-03-21 17:28:46,214 ERROR: Exception on /add_task [POST] [in /home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py:1761]
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/marta/HackYourFuture/HYF_DB_example/app/main/routes_see_data.py", line 26, in see_user_list
+    return render_template("see_data.html", title='See users', data=users.items,
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/marta/HackYourFuture/HYF_DB_example/app/templates/see_data.html", line 2, in <module>
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/marta/HackYourFuture/HYF_DB_example/app/templates/base.html", line 1, in <module>
+    {% extends "bootstrap/base.html" %}
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in <module>
+    {% block doc -%}
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in <module>
+    {%- block html %}
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in <module>
+    {% block body -%}
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in <module>
+    {% block content -%}
+  File "/home/marta/HackYourFuture/HYF_DB_example/app/templates/base.html", line 51, in <module>
+    {% block app_content %}{% endblock %}
+  File "/home/marta/HackYourFuture/HYF_DB_example/app/templates/see_data.html", line 5, in <module>
+    <h1>Hi {{ current_user.username }}!</h1>
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'current_user' is undefined
+2023-10-29 16:44:36,366 INFO: HYF DB startup [in /home/marta/HackYourFuture/HYF_DB_example/app/__init__.py:56]
+2023-10-29 16:45:30,930 INFO: HYF DB startup [in /home/marta/HackYourFuture/HYF_DB_example/app/__init__.py:56]
+2023-10-29 16:45:43,698 INFO: HYF DB startup [in /home/marta/HackYourFuture/HYF_DB_example/app/__init__.py:56]
+2023-10-29 16:46:12,601 ERROR: Exception on /see_task_list [GET] [in /home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py:825]
 Traceback (most recent call last):
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
     response = self.full_dispatch_request()
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/dx/kinetics_db-master/app/main/routes_insert_data.py", line 41, in add_task
-    user=form.status.data)
-  File "<string>", line 4, in __init__
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/state.py", line 424, in _initialize_instance
-    manager.dispatch.init_failure(self, args, kwargs)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 249, in reraise
-    raise value
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/state.py", line 421, in _initialize_instance
-    return manager.original_init(*mixed[1:], **kwargs)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/ext/declarative/base.py", line 747, in _declarative_constructor
-    setattr(self, k, kwargs[k])
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 229, in __set__
-    instance_dict(instance), value, None)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 815, in set
-    value = self.fire_replace_event(state, dict_, value, old, initiator)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 835, in fire_replace_event
-    state, value, previous, initiator or self._replace_token)
-  File "/home/dx/.conda/envs/hyf_flask_app/lib/python3.7/site-packages/sqlalchemy/orm/attributes.py", line 1185, in emit_backref_from_scalar_set_event
-    child_impl = child_state.manager[key].impl
-KeyError: 'tasks'
-2019-03-21 17:29:58,894 INFO: Kinetics DB startup [in /home/dx/kinetics_db-master/app/__init__.py:85]
-2022-03-02 22:34:28,437 INFO: Kinetics DB startup [in /home/dx/HYF_DB_example/app/__init__.py:85]
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/marta/HackYourFuture/HYF_DB_example/app/main/routes_see_data.py", line 64, in see_task_list
+    tasks = Task.query.order_by(Task.id.asc()).paginate(
+TypeError: Query.paginate() takes 1 positional argument but 4 were given
+2023-10-29 16:46:46,084 INFO: HYF DB startup [in /home/marta/HackYourFuture/HYF_DB_example/app/__init__.py:56]
+2023-10-29 16:47:26,751 ERROR: Exception on /see_task/4 [GET] [in /home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py:825]
+Traceback (most recent call last):
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/marta/HackYourFuture/HYF_DB_example/app/main/routes_see_data.py", line 93, in see_task
+    return render_template("see_data_element.html", title='See task', data_name=task.title,
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/marta/HackYourFuture/HYF_DB_example/app/templates/see_data_element.html", line 2, in <module>
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/marta/HackYourFuture/HYF_DB_example/app/templates/base.html", line 1, in <module>
+    {% extends "bootstrap/base.html" %}
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in <module>
+    {% block doc -%}
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in <module>
+    {%- block html %}
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in <module>
+    {% block body -%}
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in <module>
+    {% block content -%}
+  File "/home/marta/HackYourFuture/HYF_DB_example/app/templates/base.html", line 51, in <module>
+    {% block app_content %}{% endblock %}
+  File "/home/marta/HackYourFuture/HYF_DB_example/app/templates/see_data_element.html", line 5, in <module>
+    <h1>Hi {{ current_user.username }}!</h1>
+  File "/home/marta/miniconda3/envs/hyf_flask_example/lib/python3.10/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'current_user' is undefined
+2023-10-29 16:47:54,719 INFO: HYF DB startup [in /home/marta/HackYourFuture/HYF_DB_example/app/__init__.py:56]

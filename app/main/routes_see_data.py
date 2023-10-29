@@ -1,6 +1,5 @@
-from flask import Markup
+from markupsafe import Markup
 from flask import render_template, flash, redirect, url_for, request
-from flask_login import login_required
 
 from app import current_app, db
 from app.main import bp
@@ -19,8 +18,7 @@ def see_user_list():
 
     # enzyme_header = Enzyme.__table__.columns.keys()
     page = request.args.get('page', 1, type=int)
-    users = User.query.order_by(User.id.asc()).paginate(
-        page, current_app.config['POSTS_PER_PAGE'], False)
+    users = User.query.order_by(User.id.asc()).paginate()
     next_url = url_for('main.see_user_list', page=users.next_num) \
         if users.has_next else None
     prev_url = url_for('main.see_user_list', page=users.prev_num) \
@@ -45,7 +43,7 @@ def see_user(user_id):
     if form.validate_on_submit():
         return redirect(url_for('main.modify_user', user_id=user_id))
 
-    return render_template("see_data_element.html", title='See enzyme', data_name=user.name, data_type='User',
+    return render_template("see_data_element.html", title='See user', data_name=user.name, data_type='User',
                            data_list=data, data_list_nested=data_nested, form=form)
 
 
@@ -63,8 +61,7 @@ def see_task_list():
 
     # enzyme_header = Enzyme.__table__.columns.keys()
     page = request.args.get('page', 1, type=int)
-    tasks = Task.query.order_by(Task.id.asc()).paginate(
-        page, current_app.config['POSTS_PER_PAGE'], False)
+    tasks = Task.query.order_by(Task.id.asc()).paginate()
     next_url = url_for('main.see_task_list', page=tasks.next_num) \
         if tasks.has_next else None
     prev_url = url_for('main.see_task_list', page=tasks.prev_num) \

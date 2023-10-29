@@ -3,7 +3,6 @@ import re
 
 from flask import render_template, flash, redirect, url_for
 from flask import request
-from flask_login import login_required
 
 from app import current_app, db
 from app.main import bp
